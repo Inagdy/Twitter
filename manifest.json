@@ -1,0 +1,33 @@
+{
+"name":"twitter",
+"short_name":"twitter",
+"start_url":"/index.html",
+"display":"standalone",
+"background_color":"#000000",
+"theme_color":"#000000",
+"orientation":"portrait-primary",
+"icons":[
+    {
+        "src":"../imgs/android/android-launchericon-72-72.png",
+        "sizes":"72x72",
+        "type":"image/png"	
+    },
+    {
+        "src":"../imgs/android/android-launchericon-96-96.png",
+        "sizes":"96x96",
+        "type":"image/png"	
+    },
+    {
+        "src":"../imgs/android/android-launchericon-144-144.png",
+        "sizes":"144x144",
+        "type":"image/png"	
+    },
+    {
+        "src":"../imgs/android/android-launchericon-192-192.png",
+        "sizes":"192x192",
+        "type":"image/png"	
+    }
+]
+
+
+}
