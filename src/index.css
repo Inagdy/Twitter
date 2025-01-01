@@ -2,7 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 body{
     background-color: black;
+    font-family: "Almarai", serif;
 }
 
+.input-error {
+    border-color: rgba(146, 30, 30, 0.795) !important; /* Use !important to override existing styles */
+  }
+
+  .hide{
+display: none;
+  }

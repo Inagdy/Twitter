@@ -1,3 +1,7 @@
+import { authservice } from "./auth.services.js";
+
+let authServiceInstance = new authservice();
+
 export class uiAUTH {
   inputs = [
     { name: "name", type: "text" },
@@ -13,14 +17,12 @@ export class uiAUTH {
 
     for (let i = 0; i < this.inputs.length; i++) {
       box += `
-    
      <div class="flex flex-col mt-4 w-full">
                   <label for="${this.inputs[i].name}" class="mb-2">${this.inputs[i].name}</label>
                   <input
                     type="${this.inputs[i].type}"
                     id="${this.inputs[i].name}"
                     class="bg-black border border-[#4d5054] p-1 outline-blue-500"
-                    required
                   />        
     </div>
     `;
@@ -45,9 +47,14 @@ export class uiAUTH {
     document.getElementById("signin-form").innerHTML += submitButton;
 
     document.getElementById("sing in").addEventListener("click", () => {
-        this.displayLogin();
-      });
+      authServiceInstance.errors.classList.replace("block", "hide");
+      this.displayLogin();
+    });
   }
+
+
+
+
 
   inputslogin = [
     { name: "email-id", type: "email" },
@@ -64,7 +71,7 @@ export class uiAUTH {
                     type="${this.inputslogin[i].type}"
                     id="${this.inputslogin[i].name}"
                     class="bg-black border border-[#4d5054] p-1 outline-blue-500"
-                    required
+               
                   />        
     </div>
         `;
@@ -88,10 +95,8 @@ export class uiAUTH {
   `;
     document.getElementById("signin-form").innerHTML += submitButton;
     document.getElementById("sing up").addEventListener("click", () => {
-        this.display();
-      });
+      authServiceInstance.errors.classList.replace("block", "hide");
+      this.display();
+    });
   }
 }
-
-
-
